@@ -1,7 +1,7 @@
 package Transport;
 
-public class bus extends transport{
-    public bus(String model, int yearOfManufacture, String countryOfManufacture, int maximumSpeed, String make,double fuel,int category) {
+public class Bus extends Transport {
+    public Bus(String model, int yearOfManufacture, String countryOfManufacture, int maximumSpeed, String make, double fuel, int category) {
         super(model, yearOfManufacture, countryOfManufacture, maximumSpeed, make,fuel,category);
     }
         public void print(){

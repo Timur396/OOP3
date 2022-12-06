@@ -1,6 +1,6 @@
 package Transport;
 
-public class transport {
+abstract public class Transport {
 
     private String model;
     private int yearOfManufacture;
@@ -11,19 +11,19 @@ public class transport {
     private String refill;
     private int category;
 
-    public transport(String model, int yearOfManufacture, String countryOfManufacture, int maximumSpeed, String make, double fuel, int category) {
-        this.model = validation.validateString(model);
-        this.yearOfManufacture = validation.validateYear(yearOfManufacture);
-        this.countryOfManufacture = validation.validateString(countryOfManufacture);
-        this.maximumSpeed = validation.validateSpeed(maximumSpeed);
-        this.make = validation.validateString(make);
-        this.fuel = validation.validateRefiel(fuel);
-        if (category <= 0 || category > 6 ){
-            this.category=category;
-        }else this.category=1;
+    public Transport(String model, int yearOfManufacture, String countryOfManufacture, int maximumSpeed, String make, double fuel, int category) {
+        this.model = Validation.validateString(model);
+        this.yearOfManufacture = Validation.validateYear(yearOfManufacture);
+        this.countryOfManufacture = Validation.validateString(countryOfManufacture);
+        this.maximumSpeed = Validation.validateSpeed(maximumSpeed);
+        this.make = Validation.validateString(make);
+        this.fuel = Validation.validateRefiel(fuel);
+        if (category <= 0 || category > 6) {
+            this.category = category;
+        } else this.category = 1;
     }
 
-  public String refill(int category) {
+    String refill(int category) {
         String fuel = "";
         String fuel1 = " дизель";
         String fuel2 = " бензин";
@@ -51,7 +51,7 @@ public class transport {
     }
 
     public void setMake(String make) {
-        this.make = validation.validateString(make);
+        this.make = Validation.validateString(make);
     }
 
     public String getModel() {
@@ -59,7 +59,7 @@ public class transport {
     }
 
     public void setModel(String model) {
-        this.model = validation.validateString(model);
+        this.model = Validation.validateString(model);
     }
 
     public int getYearOfManufacture() {

@@ -1,13 +1,13 @@
 package Transport;
 
-public class train extends transport{
+public class Train extends Transport {
     private int trioPrice;
     private int tripTime;
     private String stationName;
     private String finalStop;
     private int numberOfWagons;
 
-    public train(String model, int yearOfManufacture, String countryOfManufacture, int maximumSpeed, String make, double fuel,
+    public Train(String model, int yearOfManufacture, String countryOfManufacture, int maximumSpeed, String make, double fuel,
                  int category, int trioPrice, int tripTime, String stationName, String finalStop, int numberOfWagons) {
         super(model, yearOfManufacture, countryOfManufacture, maximumSpeed, make, fuel, category);
         this.trioPrice = trioPrice;
@@ -17,13 +17,13 @@ public class train extends transport{
         this.numberOfWagons = numberOfWagons;
     }
 
-    public train(String model, int yearOfManufacture, String countryOfManufacture, int maximumSpeed,
-                 String make, int trioPrice, int tripTime, String stationName, String finalStop, int numberOfWagons, double fuel,int category) {
+    public Train(String model, int yearOfManufacture, String countryOfManufacture, int maximumSpeed,
+                 String make, int trioPrice, int tripTime, String stationName, String finalStop, int numberOfWagons, double fuel, int category) {
         super(model, yearOfManufacture, countryOfManufacture, maximumSpeed, make,fuel,category);
         this.trioPrice = trioPrice;
         this.tripTime = tripTime;
-        this.stationName = validation.validateString(stationName);
-        this.finalStop = validation.validateString(finalStop);;
+        this.stationName = Validation.validateString(stationName);
+        this.finalStop = Validation.validateString(finalStop);;
         this.numberOfWagons = numberOfWagons;
     }
 

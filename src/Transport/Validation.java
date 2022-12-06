@@ -2,7 +2,7 @@ package Transport;
 
 import java.time.LocalDate;
 
-public class validation {
+public class Validation {
     public static String validateString(String value) {
         return value == null || value.isEmpty() || value.isBlank() ? " Данные не введены " : value;
     }
